@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Phishy</title>
+     <!--bootstrap-->
+  <!--  <link rel="stylesheet" href="../assets/lib/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <!-- font-awesome icon -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+     <!--main.css-->
+     <!-- <link rel="stylesheet" type="text/css" href="../assets/css/landing.css" /> -->
+     <!--google font-->
+     <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+     </head>
+     <style type="text/css">
+      html{
+  height:100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin:0px;
+}
+.navbar{
+  min-height: 80px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.navbar-collapse.collapse {
+  padding-top:14px;
+  padding-right: 30px;
+ }
+
+ .navbar-brand{
+  padding-top: 0px;
+  padding-right: 80px;
+  font-family: 'Damion', cursive;
+  font-size:37px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+ }
+
+ @media only screen and (min-width: 768px){
+  .navbar-brand{
+  padding-top: 28px;
+  padding-right: 80px;
+  font-family: 'Damion', cursive;
+  font-size:37px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+ }
+}
+
+ .navbar-inverse .navbar-brand{
+  color:#fbf5f5;
+ }
+
+.navbar-inverse {
+    background-color: #32556C;
+    border-color: #32556C;
+}
+
+ .navbar-inverse .navbar-nav>li>a {
+    color:#ede3e9;
+    font-family: 'Open Sans', sans-serif;
+    font-size:20px;
+    text-decoration:none;
+    padding-right: 50px;
+  }
+
+.fa-user-plus:before {
+   padding-left: 10px;
+ }
+ 
+.fa-sign-in-alt:before{
+   padding-left: 10px;
+ }
+
+.fa-search:before {
+  padding-left: 10px;
+ }
+
+.pad-230px{
+  padding-top: 80px;
+  color:#ede3e9;
+  font-family: 'Raleway', sans-serif;
+  font-size:10px;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 768px){
+  .pad-230px{
+      padding-top: 280px;
+      color:#ede3e9;
+      font-family: 'Raleway', sans-serif;
+      font-size:20px;
+      z-index: 3;
+    }
+
+}
+
+.ht320{
+  height:300px;
+}
+
+.jumbotron{
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+
+.jumbotron h1{
+  font-size: 33px;
+  padding-bottom: 30px;
+  color: #4a1818;
+  font-family: 'Nunito', sans-serif;
+}
+
+.jumbotron p{
+  font-size: 17px;
+  color: #605E5E;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+}
+
+h1, h1 {
+  font-size:70px;
+ }
+
+#cont{
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+  font-size:50px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px){
+  #cont{
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                   0px 8px 13px rgba(0,0,0,0.1),
+                   0px 18px 23px rgba(0,0,0,0.1);
+      font-size:64px;
+    }
+}
+
+.btn-info {
+  background-color: rgba(244, 241, 66,0.7);
+  border-color: rgba(244, 241, 66,0.7);
+  border-radius: 20px;
+}
+
+.btn-danger {
+  border-radius: 0px;
+  background-color: #fff;
+  color: #FF6161;
+  border-color: #FF6161;
+  font-family: 'Nunito', sans-serif;
+
+}
+ 
+
+.customHome{
+  background:linear-gradient(rgba(14,15,21,0.55), rgba(14,15,21,0.55)),url('https://res.cloudinary.com/dskmn0vwa/image/upload/v1550597206/img1_ctrgsc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+  height:400px;
+  z-index: 0;
+}
+
+@media only screen and (min-width: 768px){
+  .customHome{
+  background:linear-gradient(rgba(14,15,21,0.55), rgba(14,15,21,0.55)),url('https://res.cloudinary.com/dskmn0vwa/image/upload/v1550597206/img1_ctrgsc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+  height:912px;
+  z-index: 0;
+ }
+}
+
+
+
+
+
+.col-sm-3{
+  padding: 0px 0px 0px 0px;
+  height:300px;
+  color: #605E5E;
+  font-family: 'Nunito', sans-serif;
+}
+
+.col-sm-4{
+  padding: 0px 0px 0px 0px;
+  height:580px;
+}
+
+.ux1{
+  background:url('../../assets/images/4.jpg');
+  background-size: cover;
+ /* margin-right: 30px;
+  margin-left: 118px;*/
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+.ux3{
+  background:url('../../assets/images/6.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+.htimg{
+  background:linear-gradient(rgba(14,15,21,0.55), rgba(14,15,21,0.55)),url('../../assets/images/3.jpg');
+  background-size: cover;
+ /* opacity: 0.91;*/
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0; 
+}
+
+.pad-100px{
+  padding-top: 80px;
+  color:#ede3e9;
+  font-family: 'Raleway', sans-serif;
+  font-size:8px;
+  z-index: 3;
+}
+
+.city{
+  font-size:46px;
+  color: #f9fbff;
+  z-index: 3;
+}
+
+.ht50{
+  height:50px;
+}
+
+.explr{
+  width:10px;
+}
+
+.ht665{
+  height:580px;
+}
+
+.grt{
+  font-size: 25px;
+  padding-top: 28px;
+  color: #FF6161;
+  font-family: 'Nunito', sans-serif;
+}
+
+.rating{
+  font-size: 25px;
+  padding-top: 28px;
+  padding-left:40px;
+  padding-right: 40px;
+  color: #FF6161;
+  font-family: 'Nunito', sans-serif;
+}
+
+.grt1{
+  padding: 16px 44px 8px 44px;
+  color:#605E5E;
+}
+.rating1{
+ padding: 16px 44px 8px 44px;
+ color:#605E5E;
+}
+
+.think{
+  font-size: 45px;
+  padding-bottom: 60px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.circle1{
+  background: url('../assets/images/n.png');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 768px){
+  .circle1{
+    background: url('../assets/images/n.png');
+    background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      height: 200px;
+      position: absolute;
+  }
+}
+
+.circle2{
+  background: url('../assets/images/m.png');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 768px){
+  .circle2{
+    background: url('../assets/images/m.png');
+    background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      height: 200px;
+      position: absolute;
+  }
+}
+
+.circle3{
+  background: url('../assets/images/h.png');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 768px){
+  .circle3{
+      background: url('../assets/images/h.png');
+      background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        height: 200px;
+        position: absolute;
+    }
+}
+
+
+
+.circle4{
+  background: url('https://res.cloudinary.com/dwbmtewxp/image/upload/v1557141910/kou2_pqjjf9.jpg');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+.circle5{
+  background: url('https://res.cloudinary.com/dwbmtewxp/image/upload/v1557141238/ee8f82cc-7263-45cb-b101-e91a5e66a346_hhf61i.jpg');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+.circle6{
+  background: url('https://res.cloudinary.com/dwbmtewxp/image/upload/v1556771495/teja_col7ua.jpg');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+.circle7{
+  background: url('');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+}
+.ht200{
+  height: 200px;
+  position:relative;
+}
+
+.reviewHead{
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: 100;
+  color: #FF6161;
+}
+
+@media only screen and (min-width: 768px){
+  .reviewHead{
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    color: #FF6161;
+  }
+}
+
+.reviewBody{
+    font-size: 13px;
+  color: #605E5E;
+  font-family: 'Nunito', sans-serif;
+  text-align: center; 
+  padding: 25px 100px 36px 100px;
+}
+
+@media only screen and (min-width: 768px){
+  .reviewBody{
+      font-size: 16px;
+    color: #605E5E;
+    font-family: 'Nunito', sans-serif;
+    text-align: center; 
+    padding: 25px 130px 5px 130px;
+  }
+}
+.fa-quote-right:before {
+  padding-top: 10px;
+  font-size:35px;
+  color: #FF6161;
+ }
+
+.iconz{
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.fa-linkedin-in:before{
+  padding-top: 10px;
+  font-size:35px;
+  color: #0077B5;
+}
+
+.teamHead{
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: 100;
+  color: #5f5f66;
+}
+
+@media only screen and (min-width: 768px){
+  .teamHead{
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    color: #5f5f66;
+  }
+}
+
+.teamBody{
+   font-size: 13px;
+  color: #605E5E;
+  font-family: 'Nunito', sans-serif;
+  text-align: center; 
+  padding: 25px 100px 36px 100px;
+}
+
+@media only screen and (min-width: 768px){
+  .teamBody{
+     font-size: 16px;
+    color: #605E5E;
+    font-family: 'Nunito', sans-serif;
+    text-align: center; 
+    padding: 25px 130px 36px 130px;
+  }
+}
+
+.ht400{
+  height: 400px;
+} 
+.ht55{
+  height: 55px;
+}
+.ht100{
+  height: 100px;
+}
+.ht200{
+  height:200px;
+}
+.rt{
+  padding: 0px 0px 0px 0px;
+}
+.lf{
+  padding: 0px 0px 0px 0px;
+  background:linear-gradient(rgba(14,15,21,0.55), rgba(14,15,21,0.55)),url('../../assets/images/part.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+}
+
+.cl{
+  font-size: 40px;
+  color: rgba(239, 242, 247,0.87);
+  font-family: 'Damion', cursive;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+@media only screen and (min-width: 768px){
+  .cl{
+      font-size: 50px;
+      color: rgba(239, 242, 247,0.87);
+      font-family: 'Damion', cursive;
+      text-align: center;
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                   0px 8px 13px rgba(0,0,0,0.1),
+                   0px 18px 23px rgba(0,0,0,0.1);
+    }
+}
+
+.dl{
+  font-size: 16px;
+  color:white;
+  font-family: 'Damion', cursive;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+@media only screen and (min-width: 768px){
+  .dl{
+    font-size: 26px;
+    color:white;
+    font-family: 'Damion', cursive;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  }
+}
+
+.rtt{
+  height: 400px
+}
+
+.gp{
+  
+}
+.ios{
+  
+}
+
+.ht150{
+  height:170px;
+}
+
+.ht160{
+  height: 115px;
+}
+.ht20{
+  height: 55px;
+}
+.ht0{
+  height: 0px;
+}
+.footer{
+  text-align: center;
+}
+
+.foot{
+  color: white;
+  background-color: #34536D;  
+}
+
+.footlf{
+  font-size: 38px;
+  color: rgba(239, 242, 247,0.87);
+  font-family: 'Damion', cursive;
+  text-align: center;
+  padding-top:15px; 
+}
+
+.high{
+  list-style: none;
+  padding-top: 30px;
+  font-size: 12px;
+  color:white;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+}
+
+.lih{
+  font-size: 17px;
+  padding-bottom: 8px;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.bbc{
+  margin-top: 78px;
+}
+     </style>
+<body>
+
+<!--navbar--> 
+ <header> 
+  <nav class="navbar navbar-inverse no-margin  navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>    
+    </div>
+    <a class="navbar-brand" href="#">Phishy</a>
+     <a class="navbar-brand navbar-link" href="{% url 'admin:index' %}">Admin</a>
+          <a class="navbar-brand navbar-link" href="{% url 'dappx:register' %}">Register</a>    
+          {# Some logic on what to display for last item#}
+          {% if user.is_authenticated %}
+            <a class="navbar-brand navbar-link"  href="{% url 'logout' %}">Logout</a>
+          {% else %}
+            <a class="navbar-brand navbar-link" href="{% url 'dappx:user_login' %}">Login</a>
+          {% endif %}
+    <div class="navbar-collapse collapse">
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href="#about">About Us<i class="fas fa-sign-in-alt"></i></a></li>
+       <!-- <li><a href="#contact">Sign up <i class="fas fa-user-plus"></i></a></li> -->
+     </ul>
+    </div>
+  </nav>
+ </header>
+    <section id="home" class="position-relative cover-background tz-builder-bg-image border-none bg-img-one customHome bbc">
+            <div class="container one-sixth-screen position-relative">
+                <div class="row">
+                    <div class="slider-typography text-center xs-position-absolute">
+                        <div class="slider-text-middle-main">
+                            <div class="slider-text-middle">
+                                <div class="col-md-12 col-sm-12 col-xs-12 center-col text-center pad-230px">
+                                  <!--<h1>Clubbo</h1>
+                                  <p>make clubbing easier</p>-->
+                                  <form method="post">
+                                    {% csrf_token %}
+                                       <h1 id="cont">Protecting our users from malicious links</h1>
+                                     <<input type="search" name="url" placeholder="Enter URL" class="form-control" required/><br/>
+                                     <button class="btn btn-primary btn-lg">
+                        <i class="fa fa-paper-plane"></i> Validate
+                    </button>   
+                                  </form>
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </section>
+
+<section class="ht55"></section>
+  <section id = "about">
+        <div class="row">
+          <h1 class="col-sm-12 col-xs-12 text-center think">Meet The Team</h1>
+        </div>
+            <div class="row">
+          <div class="col-md-3 col-sm-12 col-xs-12 center-col">
+             <div class="row">
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+                  <div class="col-md-4 col-sm-2 col-xs-6 circle4 ht200"></div>
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+             </div>
+             <div class="row">
+               <h1 class="teamHead">Koushik Durusoju</h1>
+             </div>
+             <div class="row iconz">
+               <i class="fab fa-linkedin-in"></i>
+              </div> 
+             <div class="row">
+               <p class="teamBody">
+                 Full-stack Web-developer,Product Development
+               </p>
+             </div>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 center-col">
+               <div class="row">
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+                  <div class="col-md-4 col-sm-2 col-xs-6 circle5 ht200"></div>
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+             </div>
+             <div class="row">
+               <h1 class="teamHead">Mohammed Arshad</h1>
+             </div>
+             <div class="row iconz">
+               <i class="fab fa-linkedin-in"></i>
+              </div> 
+             <div class="row">
+               <p class="teamBody">
+                  Requirements Gathering,Product developement
+               </p>
+             </div>   
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 center-col">
+               <div class="row">
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+                  <div class="col-md-4 col-sm-2 col-xs-6 circle6 ht200"></div>
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+               </div>
+               <div class="row">
+                 <h1 class="teamHead">Teja Prakash kuchoori</h1>
+               </div>
+               <div class="row iconz">
+               <i class="fab fa-linkedin-in"></i>
+              </div>      
+               <div class="row">
+                  <p class="teamBody">
+                     System Documentation,Product Engineering 
+                  </p>
+               </div>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 center-col">
+               <div class="row">
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+                  <div class="col-md-4 col-sm-2 col-xs-6 circle7 ht200"></div>
+                  <div class="col-md-4 col-sm-5 col-xs-3 ht200"></div>
+               </div>
+               <div class="row">
+                 <h1 class="teamHead">R. Sai Sindhu Teja</h1>
+               </div>
+               <div class="row iconz">
+               <i class="fab fa-linkedin-in"></i>
+              </div>      
+               <div class="row">
+                  <p class="teamBody">
+                    Internal guide,product development
+                  </p>
+               </div>
+          </div>
+            </div>     
+  </section>
+
+  <section class="ht450 foot">
+     <div class="row ht150">
+      <div class="col-md-3 col-sm-12 col-xs-12 ht20 footlf">Phishy</div>
+      <div class="col-md-6 col-sm-12 col-xs-12 ht160 footer">
+        <div class="row ht160">
+          <div class="col-md-6 col-sm-6 col-xs-6 ht160">
+            <ul class="high">
+              <li class="lih"><strong>My Account</strong></li>
+              <li>Dashboard</li>
+              <li>My bookings</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 ht160">
+            <ul class="high">
+              <li class="lih"><strong>Help</strong></li>
+              <li>Privacy Policy</li>
+              <li>FAQs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12 ht0"></div>
+     </div>
+  </section>
+    
+  <!--jQuery-->
+  <script type="text/javascript" src="../assets/lib/jquery.min.js"></script>
+  <!--bootstrap js -->      
+  <script type="text/javascript" src="../assets/lib/bootstrap.min.js"></script>
+  </body>
+</html>
+
+       
